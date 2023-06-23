@@ -325,13 +325,13 @@ main {
 
 .sidebar {
   margin-bottom: 15px;
-  max-height: 112px;
+  max-height: 125px;
   overflow: hidden;
   transition: var(--transition-2);
 }
 
 .sidebar.active {
-  max-height: 405px;
+  max-height: 460px;
 }
 
 .sidebar-info {
@@ -1377,10 +1377,11 @@ textarea.form-input::-webkit-resizer {
 /*-----------------------------------*\
   #RESPONSIVE
 \*-----------------------------------*/
-
-/**
- * responsive larger than 450px screen
- */
+@media (max-width: 315px) {
+  .sidebar {
+    margin-top: 125px !important;
+  }
+}
 
 @media (max-width: 1023px) {
   .sidebar {
@@ -1493,7 +1494,7 @@ textarea.form-input::-webkit-resizer {
   }
 
   .sidebar.active {
-    max-height: 584px;
+    max-height: 610px;
   }
 
   .sidebar-info {
@@ -1553,6 +1554,7 @@ textarea.form-input::-webkit-resizer {
   .navbar {
     border-radius: 0px 0px 20px 20px;
   }
+
 
   .navbar-list {
     gap: 20px;
