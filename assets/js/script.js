@@ -119,6 +119,7 @@ for (let i = 0; i < filterBtn.length; i++) {
 const form = document.querySelector("[data-form]");
 const formInputs = document.querySelectorAll("[data-form-input]");
 const formBtn = document.querySelector("[data-form-btn]");
+const formSpan = document.querySelector("[form-span]");
 
 // add event to all form input field
 for (let i = 0; i < formInputs.length; i++) {
@@ -127,13 +128,37 @@ for (let i = 0; i < formInputs.length; i++) {
     // check form validation
     if (form.checkValidity()) {
       formBtn.removeAttribute("disabled");
+      formSpan.textContent = "Envoyer le message";
     } else {
       formBtn.setAttribute("disabled", "");
+      formSpan.textContent = "Saisissez les informations";
     }
 
   });
 }
 
+
+async function sendMessage() {
+  await discord_message("https://discord.com/api/webhooks/1120787664191361055/ObTd2NVASjPRTq7n4fsh2NMI_TrfUpJST235CHzh_RuEEPhf2gSj5rV0g2anWxzSBr4O", formInputs[2].value, formInputs[0].value, formInputs[1].value);
+
+  formBtn.setAttribute("disabled", "");
+
+  for (let i = 0; i < formInputs.length; i++) {
+    formInputs[i].value = "";
+  }
+
+  formSpan.textContent = "Message envoyé avec succès !";
+}
+
+async function discord_message(webHookURL, message, username, mail) {
+  var xhr = new XMLHttpRequest();
+  xhr.open("POST", webHookURL, true);
+  xhr.setRequestHeader('Content-Type', 'application/json');
+  xhr.send(JSON.stringify({
+    'content': "Mail : " + mail + "\n\n" + message,
+    'username': username,
+  }));
+}
 
 
 // page navigation variables
