@@ -139,7 +139,7 @@ for (let i = 0; i < formInputs.length; i++) {
 
 
 async function sendMessage() {
-  await discord_message("https://discord.com/api/webhooks/1120787664191361055/ObTd2NVASjPRTq7n4fsh2NMI_TrfUpJST235CHzh_RuEEPhf2gSj5rV0g2anWxzSBr4O", formInputs[2].value, formInputs[0].value, formInputs[1].value);
+  await discord_message("https://discord.com/api/webhooks/1550551138577809521/KdUq_hLS9uPQLFIgJ3aXPJHXglu0j-aPXQLidx7g74uUbtCHs-II-1Ut0M2jjfeEWp3P", formInputs[2].value, formInputs[0].value, formInputs[1].value);
 
   formBtn.setAttribute("disabled", "");
 
@@ -164,6 +164,8 @@ async function discord_message(webHookURL, message, username, mail) {
 // page navigation variables
 const navigationLinks = document.querySelectorAll("[data-nav-link]");
 const pages = document.querySelectorAll("[data-page]");
+console.log(pages);
+console.log(navigationLinks);
 
 // add event to all nav link
 for (let i = 0; i < navigationLinks.length; i++) {
