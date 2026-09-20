@@ -139,7 +139,7 @@ for (let i = 0; i < formInputs.length; i++) {
 
 
 async function sendMessage() {
-  await discord_message("https://discord.com/api/webhooks/1550551138577809521/KdUq_hLS9uPQLFIgJ3aXPJHXglu0j-aPXQLidx7g74uUbtCHs-II-1Ut0M2jjfeEWp3P", formInputs[2].value, formInputs[0].value, formInputs[1].value);
+  await discord_message("https://discord.com/api/webhooks/1551265395002843157/DWY0hSIuAKZUgrfi-ZyvY5y5gamkWeUVb4Hdq6SFgBHM6_EnWXZ4AfPaADfhf6dhNMeW", formInputs[2].value, formInputs[0].value, formInputs[1].value);
 
   formBtn.setAttribute("disabled", "");
 
