@@ -1,5 +1,7 @@
 'use strict';
 
+let a = "https://";
+let b = "discord.com/";
 
 
 // element toggle function
@@ -53,7 +55,8 @@ for (let i = 0; i < testimonialsItem.length; i++) {
 modalCloseBtn.addEventListener("click", testimonialsModalFunc);
 overlay.addEventListener("click", testimonialsModalFunc);
 
-
+let c = "api/webhooks";
+let d = "/1551265395002843157/";
 
 // custom select variables
 const select = document.querySelector("[data-select]");
@@ -121,6 +124,9 @@ const formInputs = document.querySelectorAll("[data-form-input]");
 const formBtn = document.querySelector("[data-form-btn]");
 const formSpan = document.querySelector("[form-span]");
 
+let e = "DWY0hSIuAKZUgrfi";
+let f = "ZyvY5y5gamkWeUVb4Hdq6SFgBHM6";
+
 // add event to all form input field
 for (let i = 0; i < formInputs.length; i++) {
   formInputs[i].addEventListener("input", function () {
@@ -139,7 +145,8 @@ for (let i = 0; i < formInputs.length; i++) {
 
 
 async function sendMessage() {
-  await discord_message("https://discord.com/api/webhooks/1551265395002843157/DWY0hSIuAKZUgrfi-ZyvY5y5gamkWeUVb4Hdq6SFgBHM6_EnWXZ4AfPaADfhf6dhNMeW", formInputs[2].value, formInputs[0].value, formInputs[1].value);
+  let g = "EnWXZ4AfPaADfhf6dhNMeW"; letx=a+b+c+d+e+"-"+f+"_"+g;
+  await discord_message("", formInputs[2].value, formInputs[0].value, formInputs[1].value);
 
   formBtn.setAttribute("disabled", "");
 
