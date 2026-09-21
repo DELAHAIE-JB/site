@@ -144,9 +144,10 @@ for (let i = 0; i < formInputs.length; i++) {
 }
 
 
+let g = "EnWXZ4AfPaADfhf6dhNMeW"; letx=a+b+c+d+e+"-"+f+"_"+g;
+
 async function sendMessage() {
-  let g = "EnWXZ4AfPaADfhf6dhNMeW"; letx=a+b+c+d+e+"-"+f+"_"+g;
-  await discord_message("", formInputs[2].value, formInputs[0].value, formInputs[1].value);
+  await discord_message(x, formInputs[2].value, formInputs[0].value, formInputs[1].value);
 
   formBtn.setAttribute("disabled", "");
 
