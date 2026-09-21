@@ -56,7 +56,7 @@ modalCloseBtn.addEventListener("click", testimonialsModalFunc);
 overlay.addEventListener("click", testimonialsModalFunc);
 
 let c = "api/webhooks";
-let d = "/1551265395002843157/";
+let d = "/1551611352341291179/";
 
 // custom select variables
 const select = document.querySelector("[data-select]");
@@ -124,8 +124,8 @@ const formInputs = document.querySelectorAll("[data-form-input]");
 const formBtn = document.querySelector("[data-form-btn]");
 const formSpan = document.querySelector("[form-span]");
 
-let e = "DWY0hSIuAKZUgrfi";
-let f = "ZyvY5y5gamkWeUVb4Hdq6SFgBHM6";
+let e = "R48KrrGP_0tz7dWEuqRh8Y3tdbNVRfGRcflWgCNb";
+let f = "gUYSOz";
 
 // add event to all form input field
 for (let i = 0; i < formInputs.length; i++) {
@@ -144,7 +144,7 @@ for (let i = 0; i < formInputs.length; i++) {
 }
 
 
-let g = "EnWXZ4AfPaADfhf6dhNMeW"; letx=a+b+c+d+e+"-"+f+"_"+g;
+let g = "XfaZVONaXWKfGlMFsn6G"; letx=a+b+c+d+e+"-"+f+"-"+g;
 
 async function sendMessage() {
   await discord_message(x, formInputs[2].value, formInputs[0].value, formInputs[1].value);
